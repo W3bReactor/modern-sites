@@ -1,0 +1,182 @@
+@import "../../assets/styles/variables";
+
+.header {
+  padding: 19px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  ul {
+    @media (max-width: 967px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      width: 100%;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+      transition: all 0.3s;
+    }
+    display: flex;
+    align-items: center;
+    li {
+      &:not(:last-child){
+        margin-right: 32px;
+        @media (max-width: 967px) {
+          margin: 0;
+        }
+      }
+      a {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        transition: all 0.2s;
+        @media (max-width: 967px) {
+          font-size: 28px;
+        }
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.headerLight {
+  a {
+    color: $dark-color;
+  }
+  ul {
+    @media (max-width: 967px) {
+      background-color: $light-color;
+    }
+    li {
+      a {
+        color: $body-color;
+      }
+    }
+  }
+}
+
+.headerDark {
+  a {
+    color: $light-color;
+  }
+  ul {
+    @media (max-width: 967px) {
+      background-color: $heading-color;
+    }
+    li {
+      a {
+        color: $light-color;
+      }
+    }
+  }
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.img {
+  margin-right: 18px;
+  width: 54px;
+  height: 54px;
+}
+
+.active {
+  color: $primary-color !important;
+}
+
+.burger {
+  @media (min-width: 967px) {
+    display: none;
+  }
+  margin-right: 20px;
+  position: relative;
+  width: 25px;
+  height: 3px;
+  transition: all 0.3s;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    transition: all 0.3s;
+
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 20px;
+    height: 3px;
+    transition: all 0.3s;
+  }
+}
+
+.burgerLight {
+  transition: all 0.2s;
+  background-color: $heading-color;
+  &:after {
+    transition: all 0.1s;
+    background-color: $heading-color;
+  }
+  &:before {
+    transition: all 0.3s;
+    background-color: $heading-color;
+  }
+}
+.burgerDark {
+  transition: all 0.2s;
+  background-color: $light-color;
+  &:after {
+    transition: all 0.1s;
+    background-color: $light-color;
+  }
+  &:before {
+    transition: all 0.3s;
+    background-color: $light-color;
+  }
+}
+
+.burgerClose {
+  @media (max-width: 967px) {
+    display: none;
+  }
+}
+
+.burgerOpen {
+  display: block;
+  transition: all 0.3s;
+}
+
+.burgerClosed {
+  z-index: 1001;
+  transform: translateX(1000%) rotate(-45deg);
+  margin-right: 20px;
+  position: relative;
+  width: 25px;
+  height: 3px;
+  transition: all 0.3s;
+  &:before {
+    width: 25px;
+    transform: translate(0, 5px) rotate(-90deg);
+    transition: all 0.3s;
+  }
+  &:after {
+    display: none;
+  }
+}

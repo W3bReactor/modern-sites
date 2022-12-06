@@ -1,0 +1,32 @@
+.about {
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 1280px) {
+    flex-direction: column;
+  }
+}
+
+.img {
+  max-width: 100%;
+  @media (max-width: 967px) {
+    max-width: 500px;
+  }
+  @media (max-width: 567px) {
+    max-width: 300px;
+    max-height: 300px;
+  }
+}
+
+.content {
+  max-width: 616px;
+}
+
+.title {
+  margin-bottom: 24px;
+}
+
+.text {
+  margin-bottom: 40px;
+}

@@ -1,0 +1,87 @@
+@import "../../assets/styles/variables";
+
+.inner {
+  padding: 100px 0;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.content {
+  max-width: 580px;
+}
+
+.language {
+  color: $primary-color;
+  text-transform: uppercase;
+}
+
+.img {
+  object-fit: contain;
+}
+
+.middle {
+  margin-bottom: 100px;
+}
+
+.title {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  margin-bottom: 30px;
+}
+
+.link {
+  margin-right: 3px ;
+  color: $primary-color;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: $primary-color;
+    transition: all 0.3s;
+  }
+  &:hover:before {
+    width: 100%;
+  }
+}
+
+
+.info {
+  max-width: 1000px;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
+
+.listItem {
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  grid-column: 4 span;
+}
+
+.links {
+  margin-bottom: 100px  ;
+}
+
+.note {
+  border: 1px solid $primary-color;
+  border-radius: 10px;
+  padding: 20px;
+}

@@ -1,0 +1,36 @@
+@import "../../assets/styles/variables";
+
+.inner {
+  width: 100%;
+  height: 100%;
+}
+
+.intro {
+  width: 100%;
+  height: 100%;
+}
+
+.introDark {
+  background-color: $heading-color;
+  border-top: 1px solid $dark-color;
+  border-bottom: 1px solid $dark-color;
+  transition: all 0.3s;
+}
+.introLight {
+  background-color: $bgLight-color;
+  transition: all 0.3s;
+}
+
+
+
+.logo {
+
+}
+
+.title {
+  text-align: center;
+}
+
+.main {
+
+}

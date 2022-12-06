@@ -1,0 +1,114 @@
+@import "../../assets/styles/variables";
+
+.intro {
+  display: flex;
+  align-items: center;
+}
+
+.introDark {
+  background-color: $heading-color;
+  border-top: 1px solid $dark-color;
+  border-bottom: 1px solid $dark-color;
+  transition: all 0.3s;
+}
+.introLight {
+  background-color: $bgLight-color;
+  transition: all 0.3s;
+}
+
+.introInner {
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 967px) {
+    flex-direction: column-reverse;
+  }
+}
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 466px;
+  @media (max-width: 967px) {
+    margin-top: 100px;
+  }
+}
+
+.title {
+  margin-bottom: 16px;
+}
+
+.subTitle {
+  margin-bottom: 16px;
+}
+
+.text {
+  margin-bottom: 40px;
+
+  span {
+    color: $primary-color;
+  }
+}
+
+.react {
+  object-fit: cover;
+}
+
+.reactLight {
+  animation: 3s linear infinite spin;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+.reactDark {
+  animation: 3s linear infinite spinContrast;
+}
+
+@keyframes spinContrast {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgInner {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.css {
+  margin-left: 5px;
+}
+.js {
+  margin-left: 20px;
+}
+
+.row {
+  @media (max-width: 567px) {
+    display: none;
+  }
+}

@@ -1,0 +1,62 @@
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin: 10px 0;
+}
+
+.text {
+  max-width: 275px;
+}
+
+.messageLeft {
+  margin-right: auto;
+  .content {
+    margin-left: 20px;
+  }
+}
+
+.messageRight {
+  flex-direction: row-reverse;
+  margin-left: auto;
+  p {
+    text-align:right;
+  }
+  .content {
+    margin-right: 20px;
+  }
+}
+.content {
+  animation: linear 0.3s opacity;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.title {
+  text-align: center;
+  animation: linear 0.3s opacity;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.img {
+  cursor: pointer;
+}
+
+.link {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: linear 0.3s opacity;
+}
+

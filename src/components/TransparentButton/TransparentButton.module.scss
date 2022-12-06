@@ -1,0 +1,23 @@
+@import "../../assets/styles/variables";
+
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 14px 32px;
+  border: 1px solid $primary-color;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: $primary-color !important;
+  border-radius: 4px;
+  transition: all 0.3s;
+  &:hover {
+    color: $light-color  !important;
+    background-color: $primary-color;
+  }
+  span {
+    height: 24px;
+    width: 24px;
+    margin-right: 12px;
+  }
+}

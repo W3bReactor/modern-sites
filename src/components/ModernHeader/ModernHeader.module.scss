@@ -1,0 +1,74 @@
+@import "../../assets/styles/variables";
+
+.header {
+  padding: 19px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    li {
+      &:not(:last-child){
+        margin-right: 32px;
+      }
+      a {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        transition: all 0.2s;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.headerLight {
+  a {
+    color: $dark-color;
+  }
+  ul {
+    li {
+      a {
+        color: $body-color;
+      }
+    }
+  }
+}
+
+.headerDark {
+  a {
+    color: $light-color;
+  }
+  ul {
+    li {
+      a {
+        color: $light-color;
+      }
+    }
+  }
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.img {
+  margin-right: 18px;
+  width: 54px;
+  height: 54px;
+}
+
+.active {
+  color: $primary-color;
+}

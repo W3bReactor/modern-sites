@@ -1,15 +1,10 @@
 import React, { FC } from 'react';
 import styles from './Start.module.scss';
-import {
-	Body1,
-	Body2,
-	FullButton,
-	Heading2,
-	TransparentButton,
-} from '../../components';
+import { Body1, Heading2, TransparentButton } from '../../components';
 import frontend from '../../assets/images/frontend.png';
 import classNames from 'classnames';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 interface StartProps {
 	theme: string;
 }

@@ -12,7 +12,6 @@ import css from '../../assets/images/css.png';
 import js from '../../assets/images/js.png';
 import react from '../../assets/images/react.png';
 import { themes } from '../../redux/slices/settingsSlice/types';
-import { Element } from 'react-scroll';
 
 interface IntroProps {
 	theme: string;

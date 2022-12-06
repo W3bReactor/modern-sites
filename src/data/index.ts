@@ -177,10 +177,6 @@ export const Languages: ILanguage[] = [
 				id: 634674237345,
 				link: 'https://www.youtube.com/watch?v=mO9-tfPiDpw&list=PLCMvV-acWe2CTbkicYsTPmezh-prkEbV8',
 			},
-			{
-				id: 63463473,
-				link: 'https://www.youtube.com/watch?v=vxxm6zRyLwc&list=PLtL3lrXPn2rXss0MID96vUXsH59t4EKwk',
-			},
 		],
 		note: 'Каждый  впитывает информацию по своему, поэтому предлагаю посмотреть все сайты с полезной информацией, попробовать  посмотреть видеоролики с обучающим материалом. ',
 	},

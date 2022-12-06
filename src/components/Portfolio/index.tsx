@@ -4,13 +4,13 @@ import classNames from 'classnames';
 import styles from './Portfolio.module.scss';
 import { TransparentButton } from '../TransparentButton';
 import github from '../../assets/images/github.png';
-import exampleImage from '../../assets/images/example.png';
 import { PortfolioItem } from '../PortfolioItem';
 import { themes } from '../../redux/slices/settingsSlice/types';
 import { Element } from 'react-scroll';
 import work1 from '../../assets/images/work-1.png';
 import work2 from '../../assets/images/work-2.png';
 import work3 from '../../assets/images/work-3.png';
+
 interface PortfolioProps {
 	theme: string;
 }

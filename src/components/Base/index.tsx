@@ -2,10 +2,8 @@ import React, { FC } from 'react';
 import classNames from 'classnames';
 import styles from './Base.module.scss';
 import { themes } from '../../redux/slices/settingsSlice/types';
-import { Outlet, Route, Routes } from 'react-router-dom';
 import { ModernHeader } from '../ModernHeader';
 import Start from '../../pages/Start';
-import { InfoSkeleton } from '../InfoSkeleton';
 
 interface BaseProps {
 	theme: string;

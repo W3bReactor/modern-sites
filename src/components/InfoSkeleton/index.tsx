@@ -84,18 +84,6 @@ export const InfoSkeleton: FC<InfoSkeletonProps> = ({ theme, items }) => {
 						<li className={styles.listItem} key={obj.id}>
 							<Video src={obj.link} />
 						</li>
-						// <Body1 key={obj.id} className={styles.info} theme={theme}>
-						// 	<a
-						// 		className={styles.link}
-						// 		href={obj.link}
-						// 		target="_blank"
-						// 		rel="noreferrer"
-						// 	>
-						// 		{obj.link}
-						// 	</a>
-						// 	{obj.text && '- '}
-						// 	{obj.text}
-						// </Body1>
 					))}
 				</ul>
 			</div>

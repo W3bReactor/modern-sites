@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import 'normalize.css';
 import './assets/styles/_fonts.scss';
-import './assets/styles/prism.css';
+import './assets/styles/prism.scss';
 import './assets/styles/_global.scss';
 import classNames from 'classnames';
 import { Route, Routes } from 'react-router-dom';

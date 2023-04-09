@@ -5,10 +5,17 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+  @media (max-width: 1024px) {
+    flex-direction: column-reverse;
+  }
+
 }
 
 .title {
   margin-bottom: 20px;
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+  }
 }
 .baseTitle {
   margin-bottom: 50px;
@@ -34,9 +41,15 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 30px;
+  @media (max-width: 769px) {
+    gap: 15px;
+  }
 }
 .item {
   grid-column: 4 span;
+  @media (max-width: 769px) {
+    grid-column: 12 span;
+  }
 }
 .figure {
   display: flex;

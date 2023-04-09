@@ -30,7 +30,7 @@ export const Frameworks: FC<FrameworksProps> = ({ theme }) => {
 						ANGULAR
 					</Body1>
 				</div>
-				<LazyLoadImage src={frameworks} height={313} effect="blur" />
+				<LazyLoadImage src={frameworks}  effect="blur" />
 			</div>
 		</section>
 	);

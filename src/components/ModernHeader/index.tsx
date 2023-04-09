@@ -5,9 +5,10 @@ import styles from './ModernHeader.module.scss';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import moon from '../../assets/images/moon.png';
 import sun from '../../assets/images/sun.png';
-import { setTheme } from '../../redux/slices/settingsSlice/slice';
+import { setCloseBurger, setOpenBurger, setTheme } from '../../redux/slices/settingsSlice/slice';
 import classNames from 'classnames';
-import { useAppDispatch } from '../../redux/hooks';
+import { useAppDispatch, useAppSelector } from '../../redux/hooks';
+import { selectBurger } from '../../redux/slices/settingsSlice/selectors';
 
 interface ModernHeaderProps {
 	theme: string;
@@ -15,6 +16,7 @@ interface ModernHeaderProps {
 
 export const ModernHeader: FC<ModernHeaderProps> = ({ theme }) => {
 	const dispatch = useAppDispatch();
+	const burgerIsOpen = useAppSelector(selectBurger);
 	const onClickTheme = (theme: themes) => {
 		dispatch(setTheme(theme));
 		localStorage.setItem('theme', theme);
@@ -24,13 +26,35 @@ export const ModernHeader: FC<ModernHeaderProps> = ({ theme }) => {
 		[styles.headerLight]: theme === themes.LIGHT,
 	});
 
+	const onClickBurger = () => {
+		if (!burgerIsOpen) {
+			dispatch(setOpenBurger());
+		} else {
+			dispatch(setCloseBurger());
+		}
+	};
+
+	const onClickCloseBurger = () => {
+		dispatch(setCloseBurger());
+	};
+
+	const nav = classNames(burgerIsOpen ? styles.burgerOpen : styles.burgerClose);
+	const burger = classNames(
+		{
+			[styles.burgerDark]: theme === themes.DARK,
+			[styles.burgerLight]: theme === themes.LIGHT,
+			[styles.burgerClosed]: burgerIsOpen,
+		},
+		styles.burger
+	);
+
 	return (
 		<header className={header}>
 			<Link to="/">WebReactor</Link>
-			<nav>
+			<nav className={nav}>
 				<ul>
 					<li>
-						<NavLink to={'/modern-sites/html'}>
+						<NavLink to={'/modern-sites/html'} onClick={onClickCloseBurger}>
 							{({ isActive }) => (
 								<span className={isActive ? styles.active : undefined}>
 									HTML
@@ -39,7 +63,7 @@ export const ModernHeader: FC<ModernHeaderProps> = ({ theme }) => {
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to={'/modern-sites/css'}>
+						<NavLink to={'/modern-sites/css'} onClick={onClickCloseBurger}>
 							{({ isActive }) => (
 								<span className={isActive ? styles.active : undefined}>
 									CSS
@@ -48,14 +72,14 @@ export const ModernHeader: FC<ModernHeaderProps> = ({ theme }) => {
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to={'/modern-sites/js'}>
+						<NavLink to={'/modern-sites/js'} onClick={onClickCloseBurger}>
 							{({ isActive }) => (
 								<span className={isActive ? styles.active : undefined}>JS</span>
 							)}
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to={'/modern-sites/react'}>
+						<NavLink to={'/modern-sites/react'} onClick={onClickCloseBurger}>
 							{({ isActive }) => (
 								<span className={isActive ? styles.active : undefined}>
 									REACT
@@ -65,6 +89,9 @@ export const ModernHeader: FC<ModernHeaderProps> = ({ theme }) => {
 					</li>
 				</ul>
 			</nav>
+			<button onClick={onClickBurger} className={burger}>
+				<span></span>
+			</button>
 			{theme === themes.LIGHT && (
 				<button
 					onClick={() => onClickTheme(themes.DARK)}

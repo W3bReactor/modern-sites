@@ -15,8 +15,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 1024px) {
+    flex-direction: column-reverse;
+  }
 }
 
 .subtitle {
   margin-bottom: 32px;
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+  }
 }

@@ -111,7 +111,7 @@ export const Header: FC<HeaderProps> = ({ theme }) => {
 								duration={1000}
 								href="#"
 							>
-								Весь путь
+								Проект
 							</ScrollLink>
 						</li>
 					</ul>

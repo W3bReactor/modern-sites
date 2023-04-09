@@ -1,10 +1,12 @@
 @import "../../assets/styles/variables";
 
 .header {
+  position: relative;
   padding: 19px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 
   a {
     font-weight: 700;
@@ -13,17 +15,36 @@
   }
 
   ul {
+
     display: flex;
     align-items: center;
+    @media (max-width: 769px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      width: 100%;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+      transition: all 0.3s;
+    }
+
     li {
       &:not(:last-child){
         margin-right: 32px;
+        @media (max-width: 769px) {
+          margin: 0;
+        }
       }
       a {
         font-weight: 400;
         font-size: 16px;
         line-height: 150%;
         transition: all 0.2s;
+        @media (max-width: 769px) {
+          font-size: 28px;
+        }
         &:hover {
           color: $primary-color;
         }
@@ -37,6 +58,9 @@
     color: $dark-color;
   }
   ul {
+    @media (max-width: 769px) {
+      background-color: $light-color;
+    }
     li {
       a {
         color: $body-color;
@@ -50,6 +74,9 @@
     color: $light-color;
   }
   ul {
+    @media (max-width: 769px) {
+      background-color: $heading-color;
+    }
     li {
       a {
         color: $light-color;
@@ -71,4 +98,92 @@
 
 .active {
   color: $primary-color;
+}
+
+.burger {
+  @media (min-width: 769px) {
+    display: none;
+  }
+  margin-right: 20px;
+  position: relative;
+  width: 25px;
+  height: 3px;
+  transition: all 0.3s;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    transition: all 0.3s;
+
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 20px;
+    height: 3px;
+    transition: all 0.3s;
+  }
+}
+
+.burgerLight {
+  transition: all 0.2s;
+  background-color: $heading-color;
+  &:after {
+    transition: all 0.1s;
+    background-color: $heading-color;
+  }
+  &:before {
+    transition: all 0.3s;
+    background-color: $heading-color;
+  }
+}
+.burgerDark {
+  transition: all 0.2s;
+  background-color: $light-color;
+  &:after {
+    transition: all 0.1s;
+    background-color: $light-color;
+  }
+  &:before {
+    transition: all 0.3s;
+    background-color: $light-color;
+  }
+}
+
+.burgerClose {
+  @media (max-width: 769px) {
+    display: none;
+  }
+}
+
+.burgerOpen {
+  display: block;
+  transition: all 0.3s;
+}
+
+.burgerClosed {
+  z-index: 1001;
+  transform: translateX(1000%) rotate(-45deg);
+  margin-right: 20px;
+  position: relative;
+  width: 25px;
+  height: 3px;
+  transition: all 0.3s;
+  &:before {
+    width: 25px;
+    transform: translate(0, 5px) rotate(-90deg);
+    transition: all 0.3s;
+  }
+  &:after {
+    display: none;
+  }
+  @media (max-width: 689px) {
+    transform: translateX(500%) rotate(-45deg);
+  }
 }

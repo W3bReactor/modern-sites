@@ -32,7 +32,7 @@ export const DoubleContent: FC<DoubleContentProps> = ({
 				</Heading2>
 				<Body1 theme={theme}>{text}</Body1>
 			</div>
-			<LazyLoadImage src={image} height={310} effect={'blur'} />
+			<LazyLoadImage src={image} effect={'blur'} />
 		</section>
 	);
 };

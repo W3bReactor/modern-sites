@@ -20,4 +20,9 @@
     width: 24px;
     margin-right: 12px;
   }
+
+  @media (max-width: 567px) {
+    padding: 10px;
+    font-size: 10px;
+  }
 }

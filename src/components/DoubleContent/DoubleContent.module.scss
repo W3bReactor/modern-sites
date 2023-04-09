@@ -3,16 +3,30 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 1024px) {
+    flex-direction: column-reverse;
+  }
+
 }
 
 .innerRight {
   flex-direction: row-reverse;
+  @media (max-width: 1024px) {
+    flex-direction: column-reverse;
+  }
+
 }
 
 .content {
   width: 430px;
+  @media (max-width: 569px) {
+    width: auto;
+  }
 }
 
 .title {
   margin-bottom: 40px;
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+  }
 }

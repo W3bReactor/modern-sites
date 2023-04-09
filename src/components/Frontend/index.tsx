@@ -35,7 +35,7 @@ export const Frontend: FC<FrontendProps> = ({ theme }) => {
 							<span className={styles.primary}>понятным языком</span>
 						</Body1>
 					</div>
-					<LazyLoadImage width={438} height={563} effect="blur" src={site} />
+					<LazyLoadImage height={563} effect="blur" src={site} />
 				</div>
 			</section>
 			<section className={classNames('container', styles.section)}>

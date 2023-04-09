@@ -9,6 +9,9 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 100px;
+  @media (max-width: 1024px) {
+    flex-direction: column-reverse;
+  }
 }
 
 .content {
@@ -68,12 +71,21 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 30px;
+  @media (max-width: 1024px) {
+    gap: 15px;
+  }
 }
 
 .listItem {
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
   border-radius: 15px;
   grid-column: 4 span;
+  @media (max-width: 1024px) {
+    grid-column: 6 span;
+  }
+  @media (max-width: 569px) {
+    grid-column: 12 span;
+  }
 }
 
 .links {

@@ -3,6 +3,9 @@
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
+
+
+
 }
 
 .introInner {
@@ -11,10 +14,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 896px) {
+    flex-direction: column-reverse;
+    padding: 15px;
+  }
 }
 
 .title {
   margin-bottom: 10px;
+  @media (max-width: 896px) {
+    margin-top: 20px;
+  }
 }
 
 .desc {

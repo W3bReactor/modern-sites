@@ -32,7 +32,7 @@ const Start: FC<StartProps> = ({ theme }) => {
 							Как работают cовременные сайты?
 						</TransparentButton>
 					</div>
-					<LazyLoadImage src={frontend} height={252} width={252} />
+					<LazyLoadImage className={styles.img} src={frontend} height={252} width={252} />
 				</div>
 			</section>
 		</>

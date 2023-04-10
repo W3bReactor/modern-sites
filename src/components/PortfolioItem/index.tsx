@@ -32,7 +32,6 @@ export const PortfolioItem: FC<PortfolioItemProps> = ({
 	return (
 		<div className={item}>
 			<LazyLoadImage
-				width={416}
 				height={300}
 				className={styles.img}
 				src={src}

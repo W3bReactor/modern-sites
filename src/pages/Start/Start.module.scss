@@ -34,3 +34,10 @@
   width: fit-content;
   margin-top: 20px;
 }
+
+.img {
+  @media (max-width: 569px) {
+    height: 150px;
+    width: auto;
+  }
+}

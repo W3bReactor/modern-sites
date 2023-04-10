@@ -59,7 +59,7 @@ export const Header: FC<HeaderProps> = ({ theme }) => {
 	return (
 		<Element name="main">
 			<header className={header}>
-				<Link to="/">WebReactor</Link>
+				<Link className={styles.main} to="/">WebReactor</Link>
 				<nav className={nav}>
 					<ul>
 						<li>
